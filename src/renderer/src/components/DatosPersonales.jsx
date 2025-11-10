@@ -21,3 +21,5 @@ export default function DatosPersonales() {
     </div>
   );
 }
+
+//Una vez creado el componente, hay que importarlo en App.jsx y usarlo allí.
