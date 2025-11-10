@@ -1,22 +1,23 @@
-export default function BotonEstado({ texto, activo }) {
-  //variables
-  let btnClass;
-  let iconClass;
+// src/renderer/src/components/BotonEstado.jsx
 
-    //Logica principal
-  if (activo) {
-    btnClass = "btn btn-success";
-    iconClass = "bi bi-check-lg";
+// eslint-disable-next-line react/prop-types
+export default function BotonEstado({ texto, habilitado, onBotonClick, colorActivo, iconClass }) {
+  let btnClass;
+
+  if (habilitado) {
+    btnClass = `btn ${colorActivo}`;
   } else {
     btnClass = "btn btn-secondary";
-    iconClass = "bi bi-x-lg";
   }
 
   return (
-    <button className={btnClass} disabled={!activo}>
+    <button
+      className={btnClass}
+      disabled={!habilitado}
+      onClick={onBotonClick}
+    >
+      {/* Añadimos el icono junto al texto */}
       {texto} <i className={iconClass}></i>
     </button>
   );
 }
-
-//Una vez creado el componente, hay que importarlo en App.jsx y usarlo allí.
