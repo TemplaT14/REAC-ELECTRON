@@ -1,6 +1,3 @@
-// src/renderer/src/components/BotonEstado.jsx
-
-// eslint-disable-next-line react/prop-types
 export default function BotonEstado({ texto, habilitado, onBotonClick, colorActivo, iconClass }) {
   let btnClass;
 
@@ -11,13 +8,7 @@ export default function BotonEstado({ texto, habilitado, onBotonClick, colorActi
   }
 
   return (
-    <button
-      className={btnClass}
-      disabled={!habilitado}
-      onClick={onBotonClick}
-    >
-      {/* Añadimos el icono junto al texto */}
-      {texto} <i className={iconClass}></i>
-    </button>
+    <button className={btnClass} disabled={!habilitado} onClick={onBotonClick}>{texto} <i className={iconClass}></i></button>
   );
 }
+//Una vez creado el componente, hay que importarlo en App.jsx y usarlo allí.

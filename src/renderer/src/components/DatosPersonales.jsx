@@ -8,7 +8,6 @@ export default function DatosPersonales() {
   return (
     <div>
       <h3>Datos Personales</h3>
-      <br />
       <p>
         <strong>Nombre:</strong> {nombre}
       </p>
