@@ -1,11 +1,11 @@
 //Iconos y estilos de Bootstrap
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap-icons/font/bootstrap-icons.css';
-import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap-icons/font/bootstrap-icons.css'
+import 'bootstrap'
 //Componentes
-import DatosPersonales from './components/DatosPersonales';
-import SaludoPersonalizado from './components/SaludoPersonalizado';
-
+import DatosPersonales from './components/DatosPersonales'
+import SaludoPersonalizado from './components/SaludoPersonalizado'
+import BotonEstado from './components/BotonEstado'
 
 function App() {
   return (
@@ -14,16 +14,19 @@ function App() {
       <h1>Ejercicio 1</h1>
       <br />
       <DatosPersonales />
-
-    <hr /> 
-
+      <hr />
       <h1>Ejercicio 2</h1>
-      {/* 2. Usamos el componente varias veces con distintas props */}
-      <SaludoPersonalizado nombre="Jose" hora={10} />  {/* Debería ser "Buenos días" */}
-      <SaludoPersonalizado nombre="Silvia" hora={15} />  {/* Debería ser "Buenas tardes" */}
-      <SaludoPersonalizado nombre="Guillem" hora={21} />  {/* Debería ser "Buenas noches" */}
+      <SaludoPersonalizado nombre="Jose" hora={10} /> 
+      <SaludoPersonalizado nombre="Silvia" hora={15} /> 
+      <SaludoPersonalizado nombre="Guillem" hora={21} />
+      <hr />
+      <h1>Ejercicio 3</h1>
+      <div className="d-flex gap-2">
+        <BotonEstado texto="Conectado" activo={true} />
+        <BotonEstado texto="Desconectado" activo={false} />
+      </div>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
